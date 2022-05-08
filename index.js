@@ -32,7 +32,7 @@ async function run(){
         // for finding all
         app.get('/items', async (req, res) => {
             const authHeader = req.headers.authorization;
-            console.log(authHeader);
+            // console.log(authHeader);
             const query = {};
             const cursor = itemCollection.find(query);
             const items = await cursor.toArray();
